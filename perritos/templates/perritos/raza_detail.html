@@ -39,6 +39,9 @@
         <div class="card-body">
             <h5 class="card-title">{{ object.nombrePerrito }}</h5>
             <p class="card-text">Raza: {{ object.nombreraza }}</p>
+            <a class="btn btn-secondary" href="{% url "raza-update" object.id %}">edit</a>
+            <a class="btn btn-secondary" href="{% url "raza-delete" object.id %}">delete</a>
+            <a class="btn btn-danger" href="{% url 'raza-list' %}">Cancelar</a>
         </div>
     </div>
 </div>

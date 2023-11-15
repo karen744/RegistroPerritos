@@ -30,6 +30,11 @@
 <div class="container">
     <h2 class="display-4">Propietarios</h2>
     <hr>
+    <div>
+        <a href="{% url 'propietarios-create' %}">
+            <button type="button"  class="btn btn-success" style="margin-left: 900px;" >Agregar Propietarios</button>
+         </a>
+    </div>
 
     <div class="row">
         {% for p in object_list.all %}

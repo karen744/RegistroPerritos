@@ -39,7 +39,10 @@
         <div class="card-body">
             <h5 class="card-title">{{ object.nombre }} {{ object.apellido }}</h5>
             <p class="card-text">Edad: {{ object.edad }}</p>
-            <p class="card-text">Propietario de: {{ object.nombrePerrito }}</p>
+            <p class="card-text">Nombre del Perrito: {{ perrito.nombrePerrito }}</p>
+            <a class="btn btn-secondary" href="{% url "propietarios-update" object.id %}">edit</a>
+            <a class="btn btn-secondary" href="{% url "propietarios-delete" object.id %}">delete</a>
+            <a class="btn btn-danger" href="{% url 'propietarios-list' %}">Cancelar</a>
         </div>
     </div>
 </div>

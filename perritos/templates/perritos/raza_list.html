@@ -32,6 +32,12 @@
 <div class="container">
     <h2 class="display-4">Lista por Razas</h2>
     <hr>
+    <div>
+        <a href="{% url 'raza-create' %}">
+            <button type="button"  class="btn btn-success" style="margin-left: 900px;" >Asignar raza</button>
+         </a>
+    </div>
+    <br>
 
     <div class="row">
         {% for p in object_list.all %}

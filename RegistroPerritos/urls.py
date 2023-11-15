@@ -35,5 +35,20 @@ urlpatterns = [
     #Delete
     path('perritos/<int:pk>/delete/', views.PerritosDelete.as_view(), name='perritos-delete'),
     path('inicio/', views.InicioView.as_view(), name='inicio'),
-   
+
+
+    # Update
+    path('propietarios/<int:pk>/update/',views.PropietariosUpdate.as_view(),name='propietarios-update'), 
+    #Create
+    path('propietarios/create/', views.PropietariosCreate.as_view(), name='propietarios-create'),
+    #Delete
+    path('propietarios/<int:pk>/delete/', views.PropietariosDelete.as_view(), name='propietarios-delete'),
+
+     # Update
+    path('raza/<int:pk>/update/',views.RazaUpdate.as_view(),name='raza-update'), 
+    #Create
+    path('raza/create/', views.RazaCreate.as_view(), name='raza-create'),
+    #Delete
+    path('raza/<int:pk>/delete/', views.RazaDelete.as_view(), name='raza-delete'),
+
 ]

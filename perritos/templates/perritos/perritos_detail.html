@@ -31,16 +31,16 @@
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
-                <!-- You can add an image here if you have one -->
-                <!-- <img src="..." alt="..." class="img-fluid"> -->
+               
             </div>
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">{{ object.nombrePerrito }}</h5>
                     <p class="card-text">Edad: {{ object.edad }}</p>
                     <p class="card-text">Descripción: {{ object.descripcion }}</p>
-                    <a href="{% url "perritos-update" object.id %}">edit</a>
-                    <a href="{% url "perritos-delete" object.id %}">delete</a> 
+                    <a class="btn btn-secondary" href="{% url "perritos-update" object.id %}">edit</a>
+                    <a class="btn btn-secondary" href="{% url "perritos-delete" object.id %}">delete</a> 
+                    <a class="btn btn-danger" href="{% url 'perritos-list' %}">Cancelar</a>
                 </div>
             </div>
         </div>

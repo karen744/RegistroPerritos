@@ -29,7 +29,13 @@
 
 <div class="container">
     <h2 class="display-4 per">Perritos</h2>
-    <hr>
+   <hr>
+    <div>
+        <a href="{% url 'perritos-create' %}">
+            <button type="button"  class="btn btn-success" style="margin-left: 900px;" >Agregar Perritos</button>
+         </a>
+    </div>
+    <br>
 
     <div class="row">
         {% for p in object_list.all %}
