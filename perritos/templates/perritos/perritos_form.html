@@ -1,0 +1,36 @@
+{% block content %}
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title mb-4">Actualizar Perrito</h2>
+        <form enctype="multipart/form-data" method="post" action="{% url 'perritos-create' %}" class="col-md-6">
+         {% csrf_token %}
+          
+          <div class="mb-3">
+            <label for="{{ form.nombrePerrito.id_for_label }}" class="form-label">Nombre del Perrito</label>
+            {{ form.nombrePerrito }}
+            
+          </div>
+
+          <div class="mb-3">
+            <label for="{{ form.edad.id_for_label }}" class="form-label">Edad</label>
+            {{ form.edad }}
+            
+          </div>
+
+          <div class="mb-3">
+            <label for="{{ form.descripcion.id_for_label }}" class="form-label">Descripción</label>
+            {{ form.descripcion }}
+            
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a class='btn btn-secondary' href="{% url 'perritos-list' %}">Cancelar</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlaces a Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+{% endblock content %}
