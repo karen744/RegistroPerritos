@@ -7,8 +7,8 @@
         <form enctype="multipart/form-data" method="post">{% csrf_token %}
             {{ form.as_p }}
            <br>
-          <button type="submit">Save</button>
-       <a class='btn' href="{% url 'propietarios-list' %}">Cancel</a>
+          <button class="btn btn-success" type="submit">Save</button>
+       <a class='btn btn-danger' href="{% url 'propietarios-list' %}">Cancel</a>
      </form>
       </div>
     </div>
