@@ -3,6 +3,9 @@ from django.urls import reverse_lazy
 from django.views.generic import  ListView, DetailView, CreateView, DeleteView, UpdateView, TemplateView
 from perritos.models import Propietarios, Perritos, Raza
 
+from rest_framework import viewsets
+from .serializers import PropietariosSerializer, PerritosSerializer, RazaSerializer
+
 
 
 # Create your views here.
@@ -74,7 +77,14 @@ class RazaDelete(DeleteView):
 class InicioView(TemplateView):
     template_name = 'inicio'
 
-    
+class PropietariosViewSet(viewsets.ModelViewSet):
+    queryset = Propietarios.objects.all()
+    serializer_class = PropietariosSerializer
 
+class PerritosViewSet(viewsets.ModelViewSet):
+    queryset = Perritos.objects.all()
+    serializer_class = PerritosSerializer    
 
-    
+class RazaViewSet(viewsets.ModelViewSet):
+    queryset = Raza.objects.all()
+    serializer_class = RazaSerializer  
