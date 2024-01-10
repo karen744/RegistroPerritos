@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    # Local
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig", 
 ]
+
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +61,8 @@ ROOT_URLCONF = 'RegistroPerritos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        #'DIRS': ['templates'],
+        "DIRS": [BASE_DIR / "templates"], #
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

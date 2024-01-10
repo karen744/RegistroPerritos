@@ -20,10 +20,10 @@ from perritos import views
 from rest_framework import routers
 
 
-router = routers.DefaultRouter()
-router.register(r'propietarios_rest', views.PropietariosViewSet)
-router.register(r'perritos_rest', views.PerritosViewSet)
-router.register(r'raza_rest', views.RazaViewSet)
+#router = routers.DefaultRouter()
+#router.register(r'propietarios_rest', views.PropietariosViewSet)
+#router.register(r'perritos_rest', views.PerritosViewSet)
+#router.register(r'raza_rest', views.RazaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -56,7 +56,10 @@ urlpatterns = [
     #Delete
     path('raza/<int:pk>/delete/', views.RazaDelete.as_view(), name='raza-delete'),
 
-    path('', include(router.urls)),
-    path('api/' , include('rest_framework.urls', namespace='rest_framewoek')),
+    #path('', include(router.urls)),
+    #path('api/' , include('rest_framework.urls', namespace='rest_framewoek')),
+
+
+    path("", include("pages.urls")), 
 
 ]
